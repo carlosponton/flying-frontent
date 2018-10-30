@@ -4,6 +4,7 @@ import {FusulajeComponent} from './fusulaje/fusulaje.component';
 
 const routes: Routes = [
   { path: '', component: FusulajeComponent },
+  { path: 'planetas/:planet', component: FusulajeComponent }
 ];
 
 @NgModule({

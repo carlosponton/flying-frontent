@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-fusulaje',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FusulajeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private rest: RestService) { }
 
   ngOnInit() {
+    this.route.params.subscribe((params: any) => {
+      this.rest.getPlanet(params.planet).subscribe(planet => {
+        console.log(planet);
+      });
+    });
   }
 
 }

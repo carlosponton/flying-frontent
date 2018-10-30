@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CabinaComponent } from './cabina/cabina.component';
 import { MotorComponent } from './motor/motor.component';
 import { FusulajeComponent } from './fusulaje/fusulaje.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FusulajeComponent } from './fusulaje/fusulaje.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
