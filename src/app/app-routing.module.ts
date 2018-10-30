@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {FusulajeComponent} from './fusulaje/fusulaje.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: FusulajeComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

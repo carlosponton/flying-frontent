@@ -1,0 +1,41 @@
+* {
+  font-family: sans-serif;
+}
+
+.space {
+  height: 90%;
+}
+.rocket {
+  height: 80%;
+  background: url(/assets/spaceship.svg) no-repeat center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rocket path {
+  fill: white;
+}
+
+.tresA {
+  width: auto;
+  position: absolute;
+  bottom: 0px;
+  right: 1%;
+}
+
+.tresA > img {
+  float: right;
+  width: 70%;
+}
+
+.status {
+  height: 10%;
+  text-align: center;
+}
+
+.status > h3 {
+  padding-top: 2%;
+  text-shadow: 0px 0px 20px #FFF;
+  font-size: 24px;
+}
