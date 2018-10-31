@@ -1,0 +1,21 @@
+<div class="main">
+  <h1>
+    Bienvenidos a Flying
+  </h1>
+  <section>
+    <article class="planetas" *ngFor="let planeta of planetas">
+        <div class="planeta" [ngStyle]="{'background-image': 'url(' + planeta.img + ')'}" >
+          <a routerLink="/planetas/{{planeta.name.toLowerCase()}}">
+            {{planeta.name}}
+          </a>
+        </div>
+    </article>
+  </section>
+</div>
+<div id="space">
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+</div>

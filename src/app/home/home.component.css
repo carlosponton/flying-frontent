@@ -1,0 +1,43 @@
+.main{
+  background: black !important;
+  color: #011;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 3px #6cf;
+}
+
+.planetas {
+  width: 400px;
+  height: 400px;
+}
+
+.planetas > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-size: contain !important;
+  background: no-repeat center center;
+  font-size: 3em;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+a{
+  z-index: 10;
+  text-decoration: none;
+}
+
+

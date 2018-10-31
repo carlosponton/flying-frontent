@@ -7,13 +7,15 @@ import { CabinaComponent } from './cabina/cabina.component';
 import { MotorComponent } from './motor/motor.component';
 import { FusulajeComponent } from './fusulaje/fusulaje.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabinaComponent,
     MotorComponent,
-    FusulajeComponent
+    FusulajeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,14 @@
 <!-- ¡Créditos al autor por la imagen del cohete! <a href='http://dryicons.com/icon/spaceship-icon-5255'> Icon by Dryicons </a> -->
-<div class="space">
+<div id="space">
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+</div>
+<div class="space" [ngStyle]="{'background-image': 'url(' + planeta.img + ')', 'background-size':'cover', 'background-position': 'center center'}">
   <section class="status">
-    <h3>¡Planeta X avistado a Y grados!</h3>
+    <h3>¡Planeta {{planeta.planeta}} avistado a {{planeta.degrees}}.0000 grados!</h3>
   </section>
   <section class="rocket">
     <app-motor></app-motor>
@@ -11,3 +18,4 @@
     <img src="/assets/logo.png" alt="">
   </div>
 </div>
+

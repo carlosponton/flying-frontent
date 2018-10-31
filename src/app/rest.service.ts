@@ -16,6 +16,11 @@ export class RestService {
       map(this.extractData));
   }
 
+  getPlanets(): Observable<any> {
+    return this.http.get(this.endpoint + 'planetas').pipe(
+      map(this.extractData));
+  }
+
   private extractData(res: Response) {
     let body = res;
     return body || { };

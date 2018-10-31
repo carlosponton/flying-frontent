@@ -4,7 +4,10 @@
 
 .space {
   height: 90%;
+  background-size: contain !important;
+  background: black no-repeat center center;
 }
+
 .rocket {
   height: 80%;
   background: url(/assets/spaceship.svg) no-repeat center;
@@ -39,4 +42,12 @@
   padding-top: 2%;
   text-shadow: 0px 0px 20px #FFF;
   font-size: 24px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .tresA > img {
+    float: right;
+    width: 50%;
+  }
 }

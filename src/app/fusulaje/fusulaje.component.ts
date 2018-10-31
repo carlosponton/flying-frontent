@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestService } from '../rest.service';
+import {IgniteService} from '../ignite.service';
 
 @Component({
   selector: 'app-fusulaje',
@@ -9,13 +10,20 @@ import { RestService } from '../rest.service';
 })
 export class FusulajeComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private rest: RestService) { }
+  private planeta = {planeta: 'X', degrees: 'Y', img: ''};
+  constructor(private route: ActivatedRoute, private rest: RestService, private ignite: IgniteService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
-      this.rest.getPlanet(params.planet).subscribe(planet => {
-        console.log(planet);
-      });
+      if (params.planet) {
+        this.ignite.activeIgnite(true);
+        this.rest.getPlanet(params.planet).subscribe(planet => {
+          this.planeta = planet;
+          this.planeta.planeta = params.planet.charAt(0).toUpperCase() + params.planet.slice(1).toLowerCase();
+        });
+      } else {
+        this.ignite.activeIgnite(false);
+      }
     });
   }
 
