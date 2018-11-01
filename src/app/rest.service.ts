@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 })
 export class RestService {
 
-  private endpoint = 'http://localhost:3000/';
+  private endpoint = 'https://flying-tresastronautas.herokuapp.com/';
   constructor(private http: HttpClient) { }
 
   getPlanet(planet: string): Observable<any> {
